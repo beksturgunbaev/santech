@@ -3,6 +3,7 @@
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
+    color: #212b36;
 }
 * {
     padding: 0;
@@ -28,6 +29,7 @@ ul li {
 }
 a {
     text-decoration: none;
+    color: #212b36;
     &:hover {
         text-decoration: underline;
     }
@@ -58,9 +60,103 @@ img {
 }
 
 // ===================> Mixins <======================
-@mixin _txtStyle($f-eight, $fz, $lh, $color) {
-    font-weight: $fWeight;
+@mixin _txtStyle($f-weight, $fz, $lh) {
+    font-weight: $f-weight;
     font-size: $fz;
     line-height: $lh;
-    color: $color;
+}
+.btn {
+    button {
+        padding: 8px 22px;
+        border: none;
+        border-radius: 8px;
+        color: #fff;
+        background-color: #FA541C;
+        box-shadow: 0px 3px 1px -2px rgb(145 158 171 / 20%), 0px 2px 2px 0px rgb(145 158 171 / 14%), 0px 1px 5px 0px rgb(145 158 171 / 12%);
+        height: 48px;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        &::after {
+            content: "";
+            display: block;
+            width: 7px;
+            height: 200px;
+            margin-left: 50px;
+            background: #fff;
+            box-shadow: 0 0 10px #fff;
+            background: linear-gradient(
+                to bottom,
+                rgba(255, 255, 255, 0.5) 0%,
+                rgba(255, 255, 255, 1) 50%,
+                rgba(255, 255, 255, 0.5) 100%
+            );
+            left: -40px;
+            top: -100px;
+            z-index: 1;
+            transform: rotate(45deg);
+            position: absolute;
+            animation: movingFlare 2s ease-in-out 5s infinite;
+        }
+        &:hover {
+            opacity: .9;
+        }
+    }
+    @keyframes movingFlare {
+        0% {
+          left: -30px;
+          margin-left: 0px;
+        }
+        30% {
+          left: 110%;
+          margin-left: 80px;
+        }
+        100% {
+          left: 110%;
+          margin-left: 80px;
+        }
+      }
+}
+header {
+    padding: 20px 0;
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .logo {
+            a {
+                @include _txtStyle(700, 21px, 21px);
+            }
+        }
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            li {
+                margin: 0 20px;
+                a {
+                    @include _txtStyle(400, 16px, 21px)
+                }
+            }
+        }
+    }
+}
+.content {
+    padding: 120px 0 20px;
+    .content-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .content-desc {
+            max-width: 520px;
+            h1 {
+                @include _txtStyle(900, 52px, 64px);
+            }
+            p {
+                @include _txtStyle(400, 16px, 24px);
+                margin: 10px 0 20px;
+                opacity: .7;
+            }
+        }
+    }
 }
