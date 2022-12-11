@@ -158,7 +158,7 @@ header .navbar ul li a {
 }
 
 .content {
-  padding: 120px 0 60px;
+  padding: 20px 0 60px;
 }
 .content .content-wrap {
   display: flex;
@@ -180,8 +180,12 @@ header .navbar ul li a {
   margin: 10px 0 20px;
   opacity: 0.7;
 }
+.content .content-wrap .content-img {
+  max-width: 550px;
+  width: 100%;
+}
 .content .content-cards {
-  margin-top: 40px;
+  margin-top: 20px;
 }
 .content .content-cards .content-cards__wrap {
   display: flex;
@@ -211,13 +215,57 @@ header .navbar ul li a {
   opacity: 0.8;
 }
 
-#about {
-  padding: 40px 0;
-  background: #eef5fa;
+#services {
   height: 100vh;
+  background: #ebe9e9;
 }
-#about h1 {
+
+#about {
+  padding: 60px 0;
+}
+#about .about-wrap {
+  display: flex;
+  align-items: center;
+}
+#about .about-wrap .about-wrap__txt {
+  flex: 0 0 1;
+  padding-right: 20px;
+}
+#about .about-wrap .about-wrap__txt h1 {
   font-weight: 900;
   font-size: 42px;
   line-height: 51px;
+  margin: 30px 0 20px;
+}
+#about .about-wrap .about-wrap__txt h1 span {
+  color: #FA541C;
+}
+#about .about-wrap .about-wrap__txt p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  margin-bottom: 30px;
+}
+#about .about-wrap .about-wrap__img {
+  padding-left: 60px;
+}
+
+.desc h5 {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 18px;
+  position: relative;
+  padding-left: 40px;
+}
+.desc h5::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 30px;
+  height: 3px;
+  border-radius: 3px;
+  background: #FA541C;
 }/*# sourceMappingURL=style.css.map */
