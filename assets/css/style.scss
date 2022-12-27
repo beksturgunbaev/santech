@@ -193,7 +193,7 @@ header {
     }
 }
 #services {
-    padding: 60px 0 30px;
+    padding: 60px 0;
     h5 {
         text-align: center;
         max-width: 174px;
@@ -278,6 +278,8 @@ header {
 }
 #contacts {
     padding: 60px 0;
+    background: #444;
+    color: #fff;
     h5 {
         max-width: 200px;
         width: 100%;
@@ -286,7 +288,9 @@ header {
     }
     .contacts-wrap {
         display: flex;
-        margin-top: 40px;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 70px;
         .contacts-wrap__item {
             width: 50%;
             h2 {
@@ -296,10 +300,79 @@ header {
                 @include _txtStyle(300, 16px, 21px);
                 padding: 20px 0 10px;
                 max-width: 420px;
-                border-bottom: 2px solid #9e9c9c;
-                margin-bottom: 20px;
+                border-bottom: 2px solid #bdbbbb;
+                margin-bottom: 40px;
+                padding-bottom: 20px;
+            }
+            .item {
+                display: flex;
+                align-items: center;
+                margin: 10px 0;
+                span {
+                    @include _txtStyle(300, 16px, 21px);
+                    margin-left: 12px;
+                }
+            }
+            h3 {
+                @include _txtStyle(500, 18px, 24px);
+                text-align: center;
+            }
+            form {
+                max-width: 460px;
+                width: 100%;
+                margin: 0 auto;
+                -webkit-box-shadow: 0px 0px 51px 20px rgba(255, 255, 255, 0.53);
+                -moz-box-shadow: 0px 0px 51px 20px rgba(255, 255, 255, 0.53);
+                box-shadow: 0px 0px 51px 20px rgba(255, 255, 255, 0.53);
+                padding: 30px 40px;
+                margin-top: 50px;
+                border-radius: 12px;
+                background: #fff;
+                color: #333;
+                .form-item {
+                    margin: 16px 0;
+                    .form-title {
+                        @include _txtStyle(300, 14px, 18px);
+                        opacity: .7;
+                        margin-bottom: 7px;
+                    }
+                    input,
+                    textarea,
+                    select {
+                        font-family: 'Poppins', sans-serif;
+                        border: 1px solid #cdcaca;
+                        padding: 14px 10px;
+                        width: 100%;
+                        background: transparent;
+                        border-radius: 4px;
+                        @include _txtStyle(300, 14px, 18px);
+                    }
+                }
             }
         }   
+    }
+}
+footer {
+    padding: 40px 0;
+    background: #000;
+    color: #fff !important;
+    a {
+        color: #fff;
+    }
+    .footer-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .footer-links {
+            ul {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                li {
+                    margin-left: 40px;
+                }
+            }
+        }
     }
 }
 .desc {

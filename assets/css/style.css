@@ -216,7 +216,7 @@ header .navbar ul li a {
 }
 
 #services {
-  padding: 60px 0 30px;
+  padding: 60px 0;
 }
 #services h5 {
   text-align: center;
@@ -313,6 +313,8 @@ header .navbar ul li a {
 
 #contacts {
   padding: 60px 0;
+  background: #444;
+  color: #fff;
 }
 #contacts h5 {
   max-width: 200px;
@@ -322,7 +324,9 @@ header .navbar ul li a {
 }
 #contacts .contacts-wrap {
   display: flex;
-  margin-top: 40px;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 70px;
 }
 #contacts .contacts-wrap .contacts-wrap__item {
   width: 50%;
@@ -338,8 +342,82 @@ header .navbar ul li a {
   line-height: 21px;
   padding: 20px 0 10px;
   max-width: 420px;
-  border-bottom: 2px solid #9e9c9c;
-  margin-bottom: 20px;
+  border-bottom: 2px solid #bdbbbb;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+}
+#contacts .contacts-wrap .contacts-wrap__item .item {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+#contacts .contacts-wrap .contacts-wrap__item .item span {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  margin-left: 12px;
+}
+#contacts .contacts-wrap .contacts-wrap__item h3 {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+}
+#contacts .contacts-wrap .contacts-wrap__item form {
+  max-width: 460px;
+  width: 100%;
+  margin: 0 auto;
+  box-shadow: 0px 0px 51px 20px rgba(255, 255, 255, 0.53);
+  padding: 30px 40px;
+  margin-top: 50px;
+  border-radius: 12px;
+  background: #fff;
+  color: #333;
+}
+#contacts .contacts-wrap .contacts-wrap__item form .form-item {
+  margin: 16px 0;
+}
+#contacts .contacts-wrap .contacts-wrap__item form .form-item .form-title {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 18px;
+  opacity: 0.7;
+  margin-bottom: 7px;
+}
+#contacts .contacts-wrap .contacts-wrap__item form .form-item input,
+#contacts .contacts-wrap .contacts-wrap__item form .form-item textarea,
+#contacts .contacts-wrap .contacts-wrap__item form .form-item select {
+  font-family: "Poppins", sans-serif;
+  border: 1px solid #cdcaca;
+  padding: 14px 10px;
+  width: 100%;
+  background: transparent;
+  border-radius: 4px;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+footer {
+  padding: 40px 0;
+  background: #000;
+  color: #fff !important;
+}
+footer a {
+  color: #fff;
+}
+footer .footer-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .footer-wrap .footer-links ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+footer .footer-wrap .footer-links ul li {
+  margin-left: 40px;
 }
 
 .desc h5 {
