@@ -82,9 +82,6 @@ img {
         &:hover {
             opacity: .9;
         }
-        @include _991px() {
-            display: none;
-        }
     }
     .blink {
         position: relative;
@@ -198,7 +195,7 @@ header {
     }
 }
 .content {
-    padding: 20px 0 60px;
+    padding: 60px 0 40px;
     .content-wrap {
         display: flex;
         justify-content: space-between;
@@ -327,6 +324,92 @@ header {
         }
         .about-wrap__img {
             padding-left: 60px;
+        }
+    }
+}
+#reviews {
+    padding: 40px 0;
+    .container {
+        text-align: center;
+        h5 {
+            max-width: 290px;
+            margin: 0 auto;
+        }
+        p {
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 21px;
+            max-width: 720px;
+            margin: 20px auto;
+            opacity: 0.7;
+        }
+    }
+    .reviews-wrap {
+        padding: 90px 0 20px;
+        position: relative;
+        .slick-slider {
+            margin: 0 -15px;
+        }
+        .reviews-slider {
+            .reviews-slide {
+                -webkit-box-shadow: 0px 0px 50px -10px rgba(34, 60, 80, 0.2);
+                -moz-box-shadow: 0px 0px 50px -10px rgba(34, 60, 80, 0.2);
+                box-shadow: 0px 0px 50px -10px rgba(34, 60, 80, 0.2);
+                padding: 30px;
+                margin: 30px 15px;
+                .reviews-head {
+                    display: flex;
+                    align-items: center;
+                    .ava {
+                        width: 60px;
+                        height: 60px;
+                        border-radius: 50%;
+                        border: 1px solid #e2e1e1;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        img {
+                            width: 40px;
+                            height: 40px;
+                        }
+                    }
+                    .about {
+                        margin-left: 12px;
+                        h4 {
+                            @include _txtStyle(400, 16px, 18px)
+                        }
+                        span {
+                            @include _txtStyle(300, 14px, 16px);
+                            opacity: .6;
+                        }
+                    }
+                }
+                p {
+                    @include _txtStyle(400, 16px, 21px);
+                    padding: 20px 0;
+                }
+            }
+        }
+        .arrows {
+            position: absolute;
+            top: 30px;
+            left: 20px;
+            svg {
+                width: 30px;
+                cursor: pointer;
+            }
+            .prev {
+                left: 10px;
+                position: absolute;
+            }
+            .next {
+                position: absolute;
+                left: 70px;
+            }
+        }
+        .btn {
+            text-align: center;
+            margin-top: 30px;
         }
     }
 }

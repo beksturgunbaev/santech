@@ -80,11 +80,6 @@ img {
 .btn button:hover {
   opacity: 0.9;
 }
-@media (max-width: 991px) {
-  .btn button {
-    display: none;
-  }
-}
 .btn .blink {
   position: relative;
   overflow: hidden;
@@ -204,7 +199,7 @@ header .navbar ul li a {
 }
 
 .content {
-  padding: 20px 0 60px;
+  padding: 60px 0 40px;
 }
 .content .content-wrap {
   display: flex;
@@ -355,6 +350,95 @@ header .navbar ul li a {
 }
 #about .about-wrap .about-wrap__img {
   padding-left: 60px;
+}
+
+#reviews {
+  padding: 40px 0;
+}
+#reviews .container {
+  text-align: center;
+}
+#reviews .container h5 {
+  max-width: 290px;
+  margin: 0 auto;
+}
+#reviews .container p {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  max-width: 720px;
+  margin: 20px auto;
+  opacity: 0.7;
+}
+#reviews .reviews-wrap {
+  padding: 90px 0 20px;
+  position: relative;
+}
+#reviews .reviews-wrap .slick-slider {
+  margin: 0 -15px;
+}
+#reviews .reviews-wrap .reviews-slider .reviews-slide {
+  box-shadow: 0px 0px 50px -10px rgba(34, 60, 80, 0.2);
+  padding: 30px;
+  margin: 30px 15px;
+}
+#reviews .reviews-wrap .reviews-slider .reviews-slide .reviews-head {
+  display: flex;
+  align-items: center;
+}
+#reviews .reviews-wrap .reviews-slider .reviews-slide .reviews-head .ava {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1px solid #e2e1e1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#reviews .reviews-wrap .reviews-slider .reviews-slide .reviews-head .ava img {
+  width: 40px;
+  height: 40px;
+}
+#reviews .reviews-wrap .reviews-slider .reviews-slide .reviews-head .about {
+  margin-left: 12px;
+}
+#reviews .reviews-wrap .reviews-slider .reviews-slide .reviews-head .about h4 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+}
+#reviews .reviews-wrap .reviews-slider .reviews-slide .reviews-head .about span {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  opacity: 0.6;
+}
+#reviews .reviews-wrap .reviews-slider .reviews-slide p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  padding: 20px 0;
+}
+#reviews .reviews-wrap .arrows {
+  position: absolute;
+  top: 30px;
+  left: 20px;
+}
+#reviews .reviews-wrap .arrows svg {
+  width: 30px;
+  cursor: pointer;
+}
+#reviews .reviews-wrap .arrows .prev {
+  left: 10px;
+  position: absolute;
+}
+#reviews .reviews-wrap .arrows .next {
+  position: absolute;
+  left: 70px;
+}
+#reviews .reviews-wrap .btn {
+  text-align: center;
+  margin-top: 30px;
 }
 
 #contacts {
