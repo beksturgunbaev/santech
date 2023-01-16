@@ -1,14 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap');
-
+html {
+    overflow-x: hidden;
+}
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     color: #212b36;
+    overflow-x: hidden;
 }
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+@mixin _991px {
+    @media (max-width: 991px) { @content; }
+}
+@mixin _767px {
+    @media (max-width: 767px) { @content; }
+}
+@mixin _576px {
+    @media (max-width: 576px) { @content; }
 }
 p,
 ul,
@@ -53,6 +65,9 @@ textarea {
     width: 100%;
     margin: 0 auto;
     padding: 0 20px;
+    @include _767px() {
+        padding: 0 10px;
+    }
 }
 img {
     max-width: 100%;
@@ -65,10 +80,6 @@ img {
     font-size: $fz;
     line-height: $lh;
 }
-@mixin _991px {
-    @media (max-width: 991px) { @content; }
-}
-
 .btn {
     .blink {
         position: relative;
@@ -106,6 +117,13 @@ img {
         justify-content: center;
         align-items: center;
         cursor: pointer;
+        @include _767px() {
+            height: 38px;
+        }
+        @include _576px() {
+            width: 100%;
+            height: 58px;
+        }
         a {
             font-weight: 400;
             color: #fff;
@@ -113,6 +131,15 @@ img {
             height: 100%;
             line-height: 44px;
             padding: 0 20px;
+            @include _767px() {
+                font-size: 12px;
+                line-height: 38px;
+                padding: 0 14px;
+            }
+            @include _576px() {
+                font-size: 18px;
+                line-height: 58px;
+            }
             &:hover {
                 text-decoration: none;
             }
@@ -175,6 +202,7 @@ img {
                 .social-media__icon {
                     margin-left: 10px;
                     a {
+                        display: flex;
                         svg {
                             path {
                                 fill: #fff;
@@ -193,19 +221,50 @@ header {
     background: #fff;
     z-index: 999;
     border-bottom: 1px solid #e6e2e2;
+    @include _767px() {
+        padding: 10px 0;
+    }
     .navbar {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        .burger-menu {
+            display: none;
+            @include _767px() {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-end;
+                width: 40px;
+                span {
+                    width: 100%;
+                    height: 3px;
+                    background: #222;
+                    border-radius: 8px;
+                    margin: 4px 0;
+                    &:first-child {
+                        width: 80%;
+                    }
+                }
+            }
+        }
         ul {
             display: flex;
             align-items: center;
             justify-content: space-between;
+            @include _767px() {
+                display: none;
+            }
             li {
                 margin: 0 20px;
                 a {
                     @include _txtStyle(400, 16px, 21px)
                 }
+            }
+        }
+        .btn {
+            @include _767px() {
+                display: none;
             }
         }
     }
@@ -216,10 +275,24 @@ header {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @include _767px() {
+            flex-direction: column;
+        }
         .content-desc {
             max-width: 520px;
+            @include _767px() {
+                text-align: center
+            }
             h1 {
                 @include _txtStyle(900, 52px, 64px);
+                @include _991px() {
+                    font-size: 40px;
+                    line-height: 52px;
+                }
+                @include _767px() {
+                    font-size: 32px;
+                    line-height: 44px;
+                }
             }
             p {
                 @include _txtStyle(400, 16px, 24px);
@@ -230,6 +303,14 @@ header {
         .content-img {
             max-width: 550px;
             width: 100%;
+            @include _767px() {
+                max-width: 370px;
+            }
+        }
+    }
+    .btn-div {
+        @include _767px() {
+            margin: 0 auto;
         }
     }
     .content-cards {
@@ -237,13 +318,21 @@ header {
         .content-cards__wrap {
             display: flex;
             justify-content: space-between;
-            align-items: center;
             text-align: center;
+            @include _767px() {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
             .content-cards__item {
                 max-width: 360px;
                 width: 100%;
                 padding: 20px;
                 border: 1px solid #ebe9e9;
+                @include _767px() {
+                    max-width: 420px;
+                    margin-top: 12px;
+                }
                 img {
                     width: 40px;
                 }
@@ -289,6 +378,10 @@ header {
             transition: .3s all;
             cursor: default;
             border-radius: 7px;
+            @include _767px() {
+                box-shadow: 12px 15px 26px #d8d6d6;
+                max-width: 100%;
+            }
             &:hover {
                 background: #FA541C;
                 transform: scale(1.1);
@@ -323,12 +416,19 @@ header {
     .about-wrap {
         display: flex;
         align-items: center;
+        @include _991px() {
+            flex-direction: column;
+        }
         .about-wrap__txt {
             flex: 0 0 1;
             padding-right: 20px;
             h1 {
                 @include _txtStyle(900, 42px, 51px);
                 margin: 30px 0 20px;
+                @include _576px() {
+                    font-size: 34px;
+                    line-height: 44px;
+                }
                 span {
                     color: #FA541C;
                 }
@@ -340,6 +440,10 @@ header {
         }
         .about-wrap__img {
             padding-left: 60px;
+            @include _991px() {
+                padding-left: 0;
+                margin-top: 36px;
+            }
         }
     }
 }
@@ -373,6 +477,10 @@ header {
                 box-shadow: 0px 0px 50px -10px rgba(34, 60, 80, 0.2);
                 padding: 30px;
                 margin: 30px 15px;
+                @include _767px() {
+                    padding: 20px;
+                    margin: 0 10px 30px;
+                }
                 .reviews-head {
                     display: flex;
                     align-items: center;
@@ -384,9 +492,17 @@ header {
                         display: flex;
                         justify-content: center;
                         align-items: center;
+                        @include _767px() {
+                            width: 50px;
+                            height: 50px;
+                        }
                         img {
                             width: 40px;
                             height: 40px;
+                            @include _767px() {
+                                width: 35px;
+                                height: 35px;
+                            }
                         }
                     }
                     .about {
@@ -410,6 +526,9 @@ header {
             position: absolute;
             top: 30px;
             left: 20px;
+            @include _767px() {
+                left: 7px;
+            }
             svg {
                 width: 30px;
                 cursor: pointer;
@@ -421,6 +540,11 @@ header {
             .next {
                 position: absolute;
                 left: 70px;
+            }
+        }
+        .btn {
+            @include _767px() {
+                padding: 10px;
             }
         }
         .btn-div {
@@ -443,10 +567,20 @@ header {
         justify-content: space-between;
         align-items: center;
         margin-top: 70px;
+        @include _767px() {
+            margin-top: 40px;
+            flex-direction: column;
+        }
         .contacts-wrap__item {
             width: 50%;
+            @include _767px() {
+                width: 100%;
+            }
             h2 {
-                @include _txtStyle(700, 32px, 42px)
+                @include _txtStyle(700, 32px, 42px);
+                @include _576px() {
+                    font-size: 28px
+                }
             }
             p {
                 @include _txtStyle(300, 16px, 21px);
@@ -455,6 +589,7 @@ header {
                 border-bottom: 2px solid #bdbbbb;
                 margin-bottom: 40px;
                 padding-bottom: 20px;
+                margin-right: 20px;
             }
             .item {
                 display: flex;
@@ -470,15 +605,26 @@ header {
                 text-align: center;
             }
             .soc-medias {
+                @include _576px() {
+                    text-align: center;
+                }
                 h3 {
                     text-align: left;
                     margin: 30px 0 12px;
                     font-weight: 400;
                     font-size: 16px;
+                    @include _576px() {
+                        text-align: center;
+                        font-size: 24px;
+                    }
                 }
                 svg {
                     fill: #fff;
                     margin-right: 10px;
+                    @include _576px() {
+                        width: 40px;
+                        height: 40px;
+                    }
                 }
             }
             form {
@@ -493,6 +639,9 @@ header {
                 border-radius: 12px;
                 background: #fff;
                 color: #333;
+                @include _576px() {
+                    padding: 20px;
+                }
                 .form-item {
                     margin: 16px 0;
                     .form-title {
@@ -527,13 +676,30 @@ footer {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @include _576px() {
+            flex-direction: column;
+        }
+        .logo {
+            @include _576px() {
+                width: 100%;
+                text-align: center;
+                border-bottom: 1px solid #444;
+                padding-bottom: 10px;
+            }
+        }
         .footer-links {
             ul {
                 display: flex;
                 justify-content: flex-end;
                 align-items: center;
+                @include _576px() {
+                    flex-direction: column;
+                }
                 li {
                     margin-left: 40px;
+                    @include _576px() {
+                        margin: 20px 0 0;
+                    }
                 }
             }
         }
@@ -565,5 +731,10 @@ footer {
             border-radius: 3px;
             background: #FA541C;
         }
+    }
+}
+section {
+    @include _991px() {
+        padding: 40px 0 !important;
     }
 }
