@@ -67,19 +67,6 @@ img {
   min-height: auto;
 }
 
-.btn button {
-  padding: 0 20px;
-  border: none;
-  border-radius: 8px;
-  color: #fff;
-  background-color: #FA541C;
-  box-shadow: 0px 3px 1px -2px rgba(145, 158, 171, 0.2), 0px 2px 2px 0px rgba(145, 158, 171, 0.14), 0px 1px 5px 0px rgba(145, 158, 171, 0.12);
-  height: 44px;
-  cursor: pointer;
-}
-.btn button:hover {
-  opacity: 0.9;
-}
 .btn .blink {
   position: relative;
   overflow: hidden;
@@ -100,6 +87,34 @@ img {
   position: absolute;
   -webkit-animation: movingFlare 2s ease-in-out 5s infinite;
           animation: movingFlare 2s ease-in-out 5s infinite;
+}
+.btn .btn-div {
+  border: none;
+  border-radius: 8px;
+  background-color: #FA541C;
+  box-shadow: 0px 3px 1px -2px rgba(145, 158, 171, 0.2), 0px 2px 2px 0px rgba(145, 158, 171, 0.14), 0px 1px 5px 0px rgba(145, 158, 171, 0.12);
+  height: 44px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.btn .btn-div a {
+  font-weight: 400;
+  color: #fff;
+  font-size: 14px;
+  height: 100%;
+  line-height: 44px;
+  padding: 0 20px;
+}
+.btn .btn-div a:hover {
+  text-decoration: none;
+}
+.btn .btn-div:hover {
+  opacity: 0.9;
 }
 @-webkit-keyframes movingFlare {
   0% {
@@ -128,6 +143,15 @@ img {
     left: 110%;
     margin-left: 80px;
   }
+}
+
+.logo a {
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 21px;
+}
+.logo a span {
+  color: #FA541C;
 }
 
 .top {
@@ -178,11 +202,6 @@ header .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-header .navbar .logo a {
-  font-weight: 700;
-  font-size: 21px;
-  line-height: 21px;
 }
 header .navbar ul {
   display: flex;
@@ -318,8 +337,8 @@ header .navbar ul li a {
   line-height: 18px;
   transition: 0.3s all;
 }
-#services .btn {
-  text-align: center;
+#services .btn-div {
+  margin: 0 auto;
 }
 
 #about {
@@ -436,9 +455,8 @@ header .navbar ul li a {
   position: absolute;
   left: 70px;
 }
-#reviews .reviews-wrap .btn {
-  text-align: center;
-  margin-top: 30px;
+#reviews .reviews-wrap .btn-div {
+  margin: 30px auto 0;
 }
 
 #contacts {
@@ -492,6 +510,16 @@ header .navbar ul li a {
   font-size: 18px;
   line-height: 24px;
   text-align: center;
+}
+#contacts .contacts-wrap .contacts-wrap__item .soc-medias h3 {
+  text-align: left;
+  margin: 30px 0 12px;
+  font-weight: 400;
+  font-size: 16px;
+}
+#contacts .contacts-wrap .contacts-wrap__item .soc-medias svg {
+  fill: #fff;
+  margin-right: 10px;
 }
 #contacts .contacts-wrap .contacts-wrap__item form {
   max-width: 460px;
