@@ -7,7 +7,6 @@ body {
   font-family: "Poppins", sans-serif;
   margin: 0;
   color: #212b36;
-  overflow-x: hidden;
 }
 
 * {
@@ -600,11 +599,11 @@ header .navbar ul li a {
 #reviews .reviews-wrap .arrows {
   position: absolute;
   top: 30px;
-  left: 20px;
+  right: 20px;
 }
 @media (max-width: 767px) {
   #reviews .reviews-wrap .arrows {
-    left: 7px;
+    right: 7px;
   }
 }
 #reviews .reviews-wrap .arrows svg {
@@ -612,12 +611,12 @@ header .navbar ul li a {
   cursor: pointer;
 }
 #reviews .reviews-wrap .arrows .prev {
-  left: 10px;
+  right: 70px;
   position: absolute;
 }
 #reviews .reviews-wrap .arrows .next {
   position: absolute;
-  left: 70px;
+  right: 10px;
 }
 @media (max-width: 767px) {
   #reviews .reviews-wrap .btn {

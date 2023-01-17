@@ -6,7 +6,7 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     color: #212b36;
-    overflow-x: hidden;
+    // overflow-x: hidden;
 }
 * {
     padding: 0;
@@ -525,21 +525,21 @@ header {
         .arrows {
             position: absolute;
             top: 30px;
-            left: 20px;
+            right: 20px;
             @include _767px() {
-                left: 7px;
+                right: 7px;
             }
             svg {
                 width: 30px;
                 cursor: pointer;
             }
             .prev {
-                left: 10px;
+                right: 70px;
                 position: absolute;
             }
             .next {
                 position: absolute;
-                left: 70px;
+                right: 10px;
             }
         }
         .btn {
