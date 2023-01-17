@@ -1,8 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap");
-html {
-  overflow-x: hidden;
-}
-
 body {
   font-family: "Poppins", sans-serif;
   margin: 0;
@@ -533,8 +529,18 @@ header .navbar ul li a {
   padding: 90px 0 20px;
   position: relative;
 }
+@media (max-width: 767px) {
+  #reviews .reviews-wrap {
+    padding: 60px 0 20px;
+  }
+}
 #reviews .reviews-wrap .slick-slider {
   margin: 0 -15px;
+}
+@media (max-width: 767px) {
+  #reviews .reviews-wrap .slick-slider {
+    margin: 0;
+  }
 }
 #reviews .reviews-wrap .reviews-slider .reviews-slide {
   box-shadow: 0px 0px 50px -10px rgba(34, 60, 80, 0.2);
@@ -544,7 +550,7 @@ header .navbar ul li a {
 @media (max-width: 767px) {
   #reviews .reviews-wrap .reviews-slider .reviews-slide {
     padding: 20px;
-    margin: 0 10px 30px;
+    margin: 30px 0px 20px;
   }
 }
 #reviews .reviews-wrap .reviews-slider .reviews-slide .reviews-head {
@@ -603,7 +609,7 @@ header .navbar ul li a {
 }
 @media (max-width: 767px) {
   #reviews .reviews-wrap .arrows {
-    right: 7px;
+    right: 20px;
   }
 }
 #reviews .reviews-wrap .arrows svg {
