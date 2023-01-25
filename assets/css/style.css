@@ -525,6 +525,27 @@ header .navbar ul li a {
   margin: 20px auto;
   opacity: 0.7;
 }
+#reviews .slick-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+#reviews .slick-dots li {
+  margin: 0 9px;
+  padding: 3px;
+}
+#reviews .slick-dots li button {
+  font-size: 0;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #dbd9d9;
+  border: none;
+  cursor: pointer;
+}
+#reviews .slick-dots .slick-active button {
+  background: #999;
+}
 #reviews .reviews-wrap {
   padding: 90px 0 20px;
   position: relative;
