@@ -883,6 +883,10 @@ footer p {
   z-index: 9999;
   transition: 0.3s ease all;
 }
+.mobile-menu .logo {
+  border-bottom: 1px solid #b5b2b2;
+  padding-bottom: 7px;
+}
 .mobile-menu.active {
   opacity: 1;
   visibility: visible;

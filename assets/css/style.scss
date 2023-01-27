@@ -773,6 +773,10 @@ section {
     background: rgba(0, 0, 0, .4);
     z-index: 9999;
     transition: .3s ease all;
+    .logo {
+        border-bottom: 1px solid #b5b2b2;
+        padding-bottom: 7px;
+    }
     &.active {
         opacity: 1;
         visibility: visible;
