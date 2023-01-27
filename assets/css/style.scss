@@ -449,7 +449,7 @@ header {
     .container {
         text-align: center;
         h5 {
-            max-width: 290px;
+            max-width: 330px;
             margin: 0 auto;
         }
         p {
@@ -504,7 +504,7 @@ header {
                 margin: 30px 15px;
                 @include _767px() {
                     padding: 20px;
-                    margin: 30px 0px 20px;
+                    margin: 30px 12px 32px;
                 }
                 .reviews-head {
                     display: flex;
