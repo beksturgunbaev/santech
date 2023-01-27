@@ -870,4 +870,12 @@ footer p {
   section {
     padding: 40px 0 !important;
   }
+}
+
+.mobile-menu {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100%;
 }/*# sourceMappingURL=style.css.map */
